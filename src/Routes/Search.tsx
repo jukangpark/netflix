@@ -1,5 +1,5 @@
 const Search = () => {
-  return null;
+  return <div style={{ height: "200vh" }}></div>;
 };
 
 export default Search;
