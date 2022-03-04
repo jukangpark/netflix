@@ -51,8 +51,11 @@ const Row = styled(motion.div)`
   margin-bottom: 5px;
 `;
 
-const Box = styled(motion.div)`
+const Box = styled(motion.div)<{ bgPhoto: string }>`
   background-color: white;
+  background-image: url(${(props) => props.bgPhoto});
+  background-size: cover;
+  background-position: center center;
   height: 200px;
   color: red;
   font-size: 66px;
@@ -70,6 +73,8 @@ const rowVariants = {
   },
 };
 
+const offset = 6;
+
 const Home = () => {
   const { data, isLoading } = useQuery<IGetMoviesResult>(
     ["movies", "nowPlaying"],
@@ -79,9 +84,13 @@ const Home = () => {
   const [index, setIndex] = useState(0);
   const [leaving, setLeaving] = useState(false);
   const increaseIndex = () => {
-    if (leaving) return;
-    toggleLeaving();
-    setIndex((prev) => prev + 1);
+    if (data) {
+      if (leaving) return;
+      toggleLeaving();
+      const totalMovies = data.results.length - 1; // 영화 하나는 이미 사용하고 있기 때문에
+      const maxIndex = Math.floor(totalMovies / offset) - 1;
+      setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
+    }
   };
 
   const toggleLeaving = () => setLeaving((prev) => !prev);
@@ -108,9 +117,16 @@ const Home = () => {
                 key={index}
                 transition={{ type: "tween", duration: 1 }}
               >
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <Box key={i}>{i}</Box>
-                ))}
+                {data?.results
+                  .slice(1)
+                  .slice(offset * index, offset * index + offset)
+                  .map((movie) => (
+                    // 이렇게 작ㅇㅏ면 첫번째 영화는 제외
+                    <Box
+                      key={movie.id}
+                      bgPhoto={makeImagePath(movie.backdrop_path, "w500")}
+                    ></Box>
+                  ))}
               </Row>
             </AnimatePresence>
           </Slider>
