@@ -59,6 +59,12 @@ const Box = styled(motion.div)<{ bgPhoto: string }>`
   height: 200px;
   color: red;
   font-size: 66px;
+  &:first-child {
+    transform-origin: center left;
+  }
+  &:last-child {
+    transform-origin: center right;
+  }
 `;
 
 const rowVariants = {
@@ -70,6 +76,20 @@ const rowVariants = {
   },
   exit: {
     x: -window.outerWidth - 5,
+  },
+};
+
+const boxVariants = {
+  normal: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.3,
+    y: -50,
+    transition: {
+      delay: 0.4,
+      type: "tween",
+    },
   },
 };
 
@@ -124,6 +144,10 @@ const Home = () => {
                     // 이렇게 작ㅇㅏ면 첫번째 영화는 제외
                     <Box
                       key={movie.id}
+                      whileHover="hover"
+                      initial="normal"
+                      variants={boxVariants}
+                      transition={{ type: "tween" }}
                       bgPhoto={makeImagePath(movie.backdrop_path, "w500")}
                     ></Box>
                   ))}
