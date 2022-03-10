@@ -58,7 +58,3 @@ $ npm run start
 ## 더 고민한다면
 
 ## Demo 👇
-
-<div align="center">
-<img width="80%" alt="demo" src="https://user-images.githubusercontent.com/75718898/157581733-0d554d57-d12e-4746-91fd-178383b33db4.png">
-</div>
