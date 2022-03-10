@@ -10,7 +10,7 @@
 <p align="center">
     The Movie Database API 를 활용한 넷플릭스 클론 
 </p>
-<div>
+<div align="center">
 <img width="80%" alt="mainPage" src="https://user-images.githubusercontent.com/75718898/157581488-eaaad17d-b9cf-45eb-9602-25ad57bc4b04.png">
 </div>
 
@@ -42,6 +42,8 @@
 ## 기능
 
 - movie 조회 / 검색
+- 슬라이드 기능 / 카드 클릭 -> 확대 기능
+- 스크롤에 따라 반응하는 nav
 
 ## 실행 방법
 
@@ -56,3 +58,7 @@ $ npm run start
 ## 더 고민한다면
 
 ## Demo 👇
+
+<div align="center">
+<img width="80%" alt="demo" src="https://user-images.githubusercontent.com/75718898/157581733-0d554d57-d12e-4746-91fd-178383b33db4.png">
+</div>
