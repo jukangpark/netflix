@@ -1,7 +1,9 @@
 # Netflix Clone Project
 
-> 넷플릭스
-> <a href="https://jukangpark.github.io/netflix">Published Web</a> 👈🏻
+<p align="center">
+넷플릭스
+<a href="https://jukangpark.github.io/netflix">Published Web</a> 👈🏻
+</p>
 
 ## 서비스 소개
 
@@ -15,22 +17,22 @@
 
 ### client
 
-> @types/node: ^16.11.26
-> @types/react: ^17.0.39
-> @types/react-dom: ^17.0.13
-> @types/react-router-dom: 5.3
-> @types/styled-components: ^5.1.24
-> framer-motion: ^6.2.8
-> gh-pages: ^3.2.3
-> react: ^17.0.2
-> react-dom: ^17.0.2
-> react-hook-form: ^7.27.1
-> react-query: ^3.34.16
-> react-router-dom: 5.3
-> react-scripts: 5.0.0
-> recoil: ^0.6.1
-> styled-components: ^5.3.3
-> typescript: ^4.6.2
+> @types/node: ^16.11.26 <br>
+> @types/react: ^17.0.39 <br>
+> @types/react-dom: ^17.0.13 <br>
+> @types/react-router-dom: 5.3 <br>
+> @types/styled-components: ^5.1.24<br>
+> framer-motion: ^6.2.8<br>
+> gh-pages: ^3.2.3<br>
+> react: ^17.0.2<br>
+> react-dom: ^17.0.2<br>
+> react-hook-form: ^7.27.1<br>
+> react-query: ^3.34.16<br>
+> react-router-dom: 5.3<br>
+> react-scripts: 5.0.0<br>
+> recoil: ^0.6.1<br>
+> styled-components: ^5.3.3<br>
+> typescript: ^4.6.2<br>
 
 </p>
 
