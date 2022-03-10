@@ -10,6 +10,9 @@
 <p align="center">
     The Movie Database API 를 활용한 넷플릭스 클론 
 </p>
+<div>
+<img width="80%" alt="mainPage" src="https://user-images.githubusercontent.com/75718898/157581488-eaaad17d-b9cf-45eb-9602-25ad57bc4b04.png">
+</div>
 
 ## 🛠 Using Skill
 
